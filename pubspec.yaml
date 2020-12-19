@@ -2,7 +2,7 @@ name: malabar_hijri_date
 description: A Flutter Package for Hijri Date in Malabar of Kearala India
 version: 0.0.1
 author:
-homepage:
+homepage: https://github.com/subair-zufi/malabar_hijri_date.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
