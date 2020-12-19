@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:malabar_hijri/malabar_hijri_date.dart';
+import 'package:malabar_hijri_date/malabar_hijri_date.dart';
+
 
 void main() {
   runApp(MyApp());
