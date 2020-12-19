@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:malabar_hijri/malabar_hijri.dart';
+import 'package:malabar_hijri/malabar_hijri_date.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,15 @@ class MalabarHijriHome extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: MalabarHijriDate(),
+      body: FutureBuilder(
+        future: gregorianToHijri(2020,12,19),
+        builder: (context, snapshot) {
+          if(!snapshot.hasData)return Center(child: CircularProgressIndicator());
+          return Center(
+            child: Text(snapshot.data),
+          );
+        }
+      ),
     );
   }
 }

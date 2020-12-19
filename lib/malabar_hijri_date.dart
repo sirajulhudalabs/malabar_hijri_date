@@ -2,7 +2,6 @@ library malabar_hijri;
 
 import 'package:malabar_hijri/src/array.dart';
 
-export 'package:malabar_hijri/src/malabar_hirjri_date.dart';
 
 int lengthOfMonth;
 int hDay;
