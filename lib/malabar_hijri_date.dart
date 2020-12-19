@@ -1,6 +1,6 @@
-library malabar_hijri;
+library malabar_hijri_date;
 
-import 'package:malabar_hijri/src/array.dart';
+import 'package:malabar_hijri_date/src/array.dart';
 
 
 int lengthOfMonth;

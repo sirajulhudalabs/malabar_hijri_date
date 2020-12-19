@@ -81,7 +81,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.4"
-  malabar_hijri:
+  malabar_hijri_date:
     dependency: "direct dev"
     description:
       path: ".."

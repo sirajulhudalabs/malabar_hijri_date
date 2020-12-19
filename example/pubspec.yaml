@@ -32,7 +32,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  malabar_hijri:
+  malabar_hijri_date:
     path: ../
 
 # For information on the generic Dart part of this file, see the
