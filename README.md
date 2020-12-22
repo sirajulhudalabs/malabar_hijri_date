@@ -1,5 +1,8 @@
 # malabar_hijri
 
+[![pub package](https://img.shields.io/pub/v/malabar_hijri_date.svg)](https://pub.dev/packages/malabar_hijri_date)
+<!-- [![Build Status](https://travis-ci.org/dart-lang/malabar_hijri_date.svg?branch=master)](https://travis-ci.org/dart-lang/malabar_hijri_date) -->
+
 A Flutter Package for Hijri Date in Malabar of Kearala India, restructured every night of hilal sight
 
 ## Usage
