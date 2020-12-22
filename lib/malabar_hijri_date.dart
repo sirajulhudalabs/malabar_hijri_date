@@ -2,7 +2,6 @@ library malabar_hijri_date;
 
 import 'package:malabar_hijri_date/src/array.dart';
 
-
 int lengthOfMonth;
 int hDay;
 int hMonth;
@@ -13,12 +12,14 @@ String shortMonthName;
 String dayWeName;
 Map<int, int> adjustments;
 
+/// generalized module function (n mod m)
 _gMod(int n, int m) {
   return ((n % m) + m) % m;
 }
 
-gregorianToHijri(pYear, pMonth, pDay) async{
-  return await res().then((ummAlquraDateArray){
+/// convert hijri to gregorian date
+gregorianToHijri(pYear, pMonth, pDay) async {
+  return await res().then((ummAlquraDateArray) {
     var day = (pDay);
     var month = (pMonth);
     var year = (pYear);
@@ -44,6 +45,8 @@ gregorianToHijri(pYear, pMonth, pDay) async{
     month = ((b - d) / 30.6001).floor();
     day = (b - d) - (30.6001 * month).floor();
 
+    /// append January and February to the previous year (i.e. regard March as
+    /// the first month of the year in order to simplify leapday corrections)
     if (month > 13) {
       c += 1;
       month -= 12;
@@ -61,12 +64,11 @@ gregorianToHijri(pYear, pMonth, pDay) async{
     var iy = ii + 1;
     var im = iln - 12 * ii;
     var id = mcjdn - ummAlquraDateArray[i - 1] + 1;
-    var ml = ummAlquraDateArray[i] - ummAlquraDateArray[i - 1];
+    // var ml = ummAlquraDateArray[i] - ummAlquraDateArray[i - 1];
     print(ummAlquraDateArray[i]);
-    var lengthOfMonth = ml;
+    // var lengthOfMonth = ml;
     var wd = _gMod(cjdn + 1, 7);
     wkDay = wd == 0 ? 7 : wd;
     return '$iy, $im, $id';
   });
-
 }

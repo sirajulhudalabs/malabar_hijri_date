@@ -1,14 +1,15 @@
 # malabar_hijri
 
-A Flutter Package for Hijri Date in Malabar of Kearala India
+A Flutter Package for Hijri Date in Malabar of Kearala India, restructured every night of hilal sight
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+#### Convert Gregorian date to Malabar Hijri:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+ ```dart
+  int year= DateTime.now().year;
+  int month= DateTime.now().month;
+  int day= DateTime.now().day;
+  gregorianToHijri(year, month, day);
+  /// result will be like: 2020, 12, 28
+```

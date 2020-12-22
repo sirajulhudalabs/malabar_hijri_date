@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:malabar_hijri_date/malabar_hijri_date.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -22,17 +21,16 @@ class MyApp extends StatelessWidget {
 class MalabarHijriHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: FutureBuilder(
-        future: gregorianToHijri(2020,12,19),
-        builder: (context, snapshot) {
-          if(!snapshot.hasData)return Center(child: CircularProgressIndicator());
-          return Center(
-            child: Text(snapshot.data),
-          );
-        }
-      ),
+          future: gregorianToHijri(2020, 12, 19),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData)
+              return Center(child: CircularProgressIndicator());
+            return Center(
+              child: Text(snapshot.data),
+            );
+          }),
     );
   }
 }

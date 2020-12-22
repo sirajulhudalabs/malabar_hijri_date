@@ -51,7 +51,7 @@ final Map<int, String> shortWdNames = {
 };
 
 Future<dynamic> res() async {
-  var data=  await Dio()
+  var data = await Dio()
       .get('https://malabar-ijri-api.herokuapp.com/array')
       .then((value) => value.data[0]['data']);
   return data;
